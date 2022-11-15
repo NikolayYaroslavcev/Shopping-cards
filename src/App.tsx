@@ -1,12 +1,21 @@
 import React from 'react';
-import './App.css';
+import {ProductsPage} from './pages/ProductsPage';
+import {Route, Routes} from 'react-router-dom';
+import AboutPage from './pages/aboutPage';
+import {Navigation} from './components/Navigation';
+
 
 function App() {
-  return (
-    <div className="App">
+    return (
+        <>
+            <Navigation/>
+            <Routes>
+                <Route path="/" element={<ProductsPage/>}/>
+                <Route path="/about" element={<AboutPage/>}/>
 
-    </div>
-  );
+            </Routes>
+        </>
+    )
 }
 
 export default App;
